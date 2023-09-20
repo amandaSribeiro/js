@@ -5,6 +5,7 @@
 2°) Desenvolva uma página que leia uma temperatura e converta a ela para os graus Fahrenheit ou Celsius.
 
 °F = °C × 1, 8 + 32
+<br>
 °C = (°F − 32) ÷ 1, 8
 
 3°) Desenvolva uma página leia o nome, o valor e a quantidade vendida de três produtos. Calcule o valor total da venda.
@@ -16,6 +17,7 @@
 6°) Tendo como dados de entrada a altura e o sexo de uma pessoa a partir de uma caixa de combinação, construa uma página que calcule seu peso ideal, utilizando as seguintes fórmulas:
 
 Para homens: (72.7*h) - 58
+<br>
 Para mulheres: (62.1*h) - 44.7 (h = altura)
 
 7-) Crie uma página que receba N valores do usuário. Crie botões para mostrar todos os valores inseridos, o maior valor e o menor valor do vetor.
