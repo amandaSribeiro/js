@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares</title>
+    <!-- Inclua o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Números Pares e Soma Total</h1>
+
+        <a href="index.html" class="btn btn-primary mt-3">Voltar ao Menu</a>
+      
+        <div class="mb-3">
+            <br>
+            <label for="valor" class="form-label">Digite um valor:</label>
+            <br>
+            <input type="number" class="form-control" id="valor">
+        </div>
+
+        <button class="btn btn-primary" onclick="exibirNumerosPares()">Exibir Números Pares</button>
+
+        
+
+        <div id="resultado" class="mt-4" style="display: none;">
+            <p>Números pares:</p>
+            <div id="numerosPares"></div>
+
+            <p>Soma total:</p>
+            <div id="somaTotal"></div>
+
+        </div>
+        
+    </div>
+
+    <!-- scripts do Bootstrap e jQuery (necessários para o Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function exibirNumerosPares() {
+            var valor = parseInt(document.getElementById("valor").value);
+            var numerosPares = [];
+            var somaTotal = 0;
+
+            for (var i = 2; i <= valor; i += 2) {
+                numerosPares.push(i);
+                somaTotal += i;
+            }
+
+            var numerosParesTexto = numerosPares.join(", ");
+            var resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.style.display = "block";
+            
+            document.getElementById("numerosPares").textContent = numerosParesTexto;
+            document.getElementById("somaTotal").textContent = somaTotal;
+        }
+    </script>
+</body>
+</html>

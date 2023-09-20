@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gasto com Combustível</title>
+    <!-- Inclua o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Calculadora de Gasto com Combustível</h1>
+        <a href="index.html" class="btn btn-primary mt-3">Voltar ao Menu</a>
+        <div class="mb-3">
+            <br>
+            <label for="quilometragem" class="form-label">Quilometragem percorrida (km):</label>
+            <input type="number" class="form-control" id="quilometragem">
+        </div>
+
+        <div class="mb-3">
+            <label for="valorCombustivel" class="form-label">Valor do combustível por litro (R$):</label>
+            <input type="number" class="form-control" id="valorCombustivel">
+        </div>
+
+        <button class="btn btn-primary mt-3" onclick="calcularGasto()">Calcular Gasto</button>
+
+        <div id="resultado" class="mt-4" style="display: none;">
+            <p>Gasto com combustível:</p>
+            <div id="gastoCombustivel"></div>
+        </div>
+    </div>
+
+    <!-- Inclua os scripts do Bootstrap e jQuery (necessários para o Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function calcularGasto() {
+            var quilometragem = parseFloat(document.getElementById("quilometragem").value) || 0;
+            var valorCombustivel = parseFloat(document.getElementById("valorCombustivel").value) || 0;
+            var consumoMedio = 8; // Consumo médio em km/l
+
+            var gastoCombustivel = (quilometragem / consumoMedio) * valorCombustivel;
+            var resultadoDiv = document.getElementById("resultado");
+            var gastoCombustivelDiv = document.getElementById("gastoCombustivel");
+
+            gastoCombustivelDiv.textContent = "R$ " + gastoCombustivel.toFixed(2);
+            resultadoDiv.style.display = "block";
+        }
+    </script>
+</body>
+</html>
