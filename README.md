@@ -1,4 +1,5 @@
 # Lista JavaScript
+## Link para o Github pages: https://amandasribeiro.github.io/js/
 
 1°) Desenvolver um programa (Web) para exibir todos os números pares de um intervalo de 1 até o valor informado pelo usuário. Mostre a soma total desses valores.
 
